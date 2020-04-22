@@ -1,0 +1,12 @@
+<% include partials/header.ejs %>
+<div class="ui container" id="mar1">
+	
+<% blogs.forEach(function(blog){ %>
+	<%= blog.title %><br>
+	<img src="<%= blog.image %>"><br>
+	<%= blog.body.substring(0,100) %>...<br>
+	<%= blog.date.toDateString() %><br>
+	<a href="/blogs/<%= blog._id %>">Read more</a><br>
+<% }) %>
+</div>	
+<% include partials/footer.ejs %>
